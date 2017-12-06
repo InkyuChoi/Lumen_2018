@@ -9,27 +9,24 @@ $result = mysqli_query($conn, "SELECT * FROM topic");
 <html>
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="http://aika823.dothome.co.kr/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
 
 <body>
 <header>
-  <h1><a href="http://aika823.dothome.co.kr/index.php">Lumen 2018</a></h1>
+  <h1><a href="http://aika823.dothome.co.kr/index.php">Lumen 2018</a><span class="badge badge-secondary">New</span></h1>
+  <button type="button" class="btn btn-primary"  onclick=location.href="http://aika823.dothome.co.kr/write.php">글쓰기</button>
 </header>
 
-<nav>
+<nav2>
     <ol>
         <?php
         while($row = mysqli_fetch_assoc($result)){
-          echo '<li><a href="http://aika823.dothome.co.kr/index.php?id='.$row['id'].'">'.$row['title'].'</a></li>'."\n";
+          echo '<li id="list1"><a href="http://aika823.dothome.co.kr/index.php?id='.$row['id'].'">'.$row['title'].'</a></li>'."\n";
         }
         ?>
     </ol>
-</nav>
-
-<div id="control">
-  <a href="http://aika823.dothome.co.kr/write.php">쓰기</a>
-</div>
+</nav2>
 
 <article>
     <?php
