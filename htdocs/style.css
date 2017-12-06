@@ -10,23 +10,11 @@ nav {
 }
 nav ol{
     list-style:none;
-    width = 15%;
 }
 article{
-  font-style: italic;
     float:left;
     padding:20px;
 }
 h2{
     font-size:50px;
-}
-control{
-  font-size 200px;
-}
-body nav ol {
-    width: 100px;
-}
-
-form p textarea {
-    width: 100px;
 }
